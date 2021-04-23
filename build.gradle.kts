@@ -15,7 +15,7 @@ application {
 }
 tasks.jar {
     manifest {
-        attributes(mapOf("Main-Class" to project.name,
+        attributes(mapOf("Main-Class" to "com.example.ApplicationKt",
             "Implementation-Version" to project.version))
     }
 //    from { configurations.runtimeClasspath.}
