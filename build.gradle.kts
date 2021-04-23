@@ -13,6 +13,17 @@ version = "0.0.1"
 application {
     mainClass.set("com.example.ApplicationKt")
 }
+//tasks.jar {
+//    manifest {
+//        attributes(mapOf("Main-Class" to project.name,
+//            "Implementation-Version" to project.version))
+//    }
+////    from { configurations.runtimeClasspath.}
+//}
+
+tasks.create("stage"){
+    dependsOn("installDist")
+}
 
 repositories {
     mavenCentral()
