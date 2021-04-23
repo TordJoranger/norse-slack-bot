@@ -18,7 +18,14 @@ tasks.jar {
         attributes(mapOf("Main-Class" to "com.example.ApplicationKt",
             "Implementation-Version" to project.version))
     }
-//    from { configurations.runtimeClasspath.}
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+    })
+//    from(configurations.compile.map { configuration ->
+//        configuration.asFileTree.fold(files().asFileTree) { collection, file ->
+//            if (file.isDirectory) collection else collection.plus(zipTree(file))
+//        }
+//    })
 }
 
 tasks.create("stage"){
