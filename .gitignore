@@ -1,8 +1,8 @@
 .DS_Store
 workspace.xml
-.gradle/*
 build/
 *.iml
 .idea/*
 
 /kotlin-native/dist
+/.gradle/
