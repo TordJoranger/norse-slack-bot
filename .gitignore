@@ -5,5 +5,6 @@ build/
 .idea/*
 
 /kotlin-native/dist
-/.gradle/*
+\.gradle\*
 /.gradle/6.8/
+.gradle*
