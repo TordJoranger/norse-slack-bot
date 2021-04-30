@@ -4,7 +4,7 @@ build/
 *.iml
 
 /kotlin-native/dist
-\.gradle\*
+\.gradle\
 /.gradle/
 .gradle*
 /.idea/
