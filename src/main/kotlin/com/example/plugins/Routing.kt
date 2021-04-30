@@ -1,6 +1,7 @@
 package com.example.plugins
 
 import com.example.homeRoute
+import com.example.messageRoute
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.application.*
@@ -11,5 +12,6 @@ fun Application.configureRouting() {
 
     routing {
        homeRoute()
+        messageRoute()
     }
 }

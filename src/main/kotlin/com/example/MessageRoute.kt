@@ -7,8 +7,8 @@ import io.ktor.routing.*
 import jdk.nashorn.internal.objects.NativeFunction.function
 
 fun Routing.messageRoute() {
-    route("/message"){
-        post {
+
+        post("/message") {
             val payload = call.request
 
             call.respond(200)
