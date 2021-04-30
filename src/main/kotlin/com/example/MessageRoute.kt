@@ -2,15 +2,16 @@ package com.example
 
 import com.slack.api.Slack
 import io.ktor.application.*
+import io.ktor.http.*
+import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
 fun Routing.messageRoute() {
 
         post("/message") {
-            val payload = call.request
-
-            call.respond(200)
+            val payload = call.receive<String>()
+            call.respond(HttpStatusCode.OK,payload)
             val token = System.getenv("SLACK_TOKEN")
             val slack = Slack.getInstance()
             val response = slack.methods(token).chatPostMessage {
