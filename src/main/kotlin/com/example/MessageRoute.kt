@@ -4,7 +4,6 @@ import com.slack.api.Slack
 import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.routing.*
-import jdk.nashorn.internal.objects.NativeFunction.function
 
 fun Routing.messageRoute() {
 
@@ -34,4 +33,4 @@ fun Routing.messageRoute() {
 //    }
 //        call.respondText("Response is: $response")
 //    }
-}
+//}
